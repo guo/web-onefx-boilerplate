@@ -1,6 +1,5 @@
-import process from 'global/process';
-import dotenv from 'dotenv';
-dotenv.config();
+const {config} = require('dotenv');
+config();
 
 module.exports = {
   project: 'web-onefx-boilerplate',
@@ -82,10 +81,6 @@ module.exports = {
       'https://cdn.jsdelivr.net/particles.js/2.0.0/',
       'https://checkout.stripe.com/checkout.js',
     ],
-  },
-  stripe: {
-    stripePubKey: 'pk_test_1yMRIhidzZOrBJ84mJNHqa4O',
-    stripePriKey: 'sk_test_5pGpbrSWDfkXbg1XoOOqQzQy',
   },
   apiGatewayUrl: 'http://localhost:4100/api-gateway/',
 };

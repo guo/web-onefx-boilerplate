@@ -1,4 +1,4 @@
-/* eslint-disable no-process-env,no-unused-vars */
+
 const del = require('del');
 const gulp = require('gulp');
 const gulpLivereload = require('gulp-livereload');
@@ -18,7 +18,7 @@ const clean = () => {
 const watchServer = done => {
   nodemon({
     exec: 'npm',
-    ext: 'js json jsx yaml jade md',
+    ext: 'js json jsx yaml jade md ts tsx',
     script: 'start',
     ignore: ['node_modules/', 'dist/', '*translations/'],
   });
@@ -40,9 +40,13 @@ const watchJavascripts = done => {
     [
       'src/client/javascripts/**/*.js',
       'src/client/javascripts/**/*.jsx',
+      'src/client/javascripts/**/*.ts',
+      'src/client/javascripts/**/*.tsx',
       'src/client/javascripts/**/*.json',
       'src/shared/**/*.js',
       'src/shared/**/*.jsx',
+      'src/shared/**/*.ts',
+      'src/shared/**/*.tsx',
       'src/shared/**/*.json',
     ],
     compileJavascripts,

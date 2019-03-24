@@ -6,14 +6,9 @@ module.exports = {
       },
     }],
     ['@babel/preset-react'],
-    ['@babel/preset-flow'],
+    ['@babel/preset-typescript'],
   ],
-  plugins: [
-    '@babel/plugin-transform-flow-strip-types',
-    '@babel/plugin-proposal-object-rest-spread',
-    'transform-class-properties',
-    'react-require',
-  ],
+  plugins: [],
   ignore: [
     /node_modules\/(?!onefx)/g,
   ],
